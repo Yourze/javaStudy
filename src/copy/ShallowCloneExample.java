@@ -1,7 +1,9 @@
-public class shallowCloneExample implements Cloneable{
+package copy;
+
+public class ShallowCloneExample implements Cloneable{
     private int[] arr;
 
-    public shallowCloneExample() {
+    public ShallowCloneExample() {
         arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
             arr[i] = i;
@@ -17,13 +19,13 @@ public class shallowCloneExample implements Cloneable{
     }
 
     @Override
-    protected shallowCloneExample clone() throws  CloneNotSupportedException {
-        return (shallowCloneExample) super.clone();
+    protected ShallowCloneExample clone() throws  CloneNotSupportedException {
+        return (ShallowCloneExample) super.clone();
     }
 
     public static void main(String[] args) {
-        shallowCloneExample e1 = new shallowCloneExample();
-        shallowCloneExample e2 = null;
+        ShallowCloneExample e1 = new ShallowCloneExample();
+        ShallowCloneExample e2 = null;
         try {
             e2 = e1.clone();
         } catch (CloneNotSupportedException e) {
