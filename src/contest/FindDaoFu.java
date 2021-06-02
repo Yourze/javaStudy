@@ -1,5 +1,6 @@
 package contest;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class FindDaoFu {
@@ -8,13 +9,14 @@ public class FindDaoFu {
             int count = 0;
             for (int j = 0; j < paraDF.length; j++) {
                 if (paraDF[j] == paraQS[i]) {
-                    System.out.println('Y');;
+                    System.out.print('Y');;
+                    break;
                 } else {
                     count++;
                 }
             }
             if (count == paraDF.length) {
-                System.out.println('N');;
+                System.out.print('N');;
             }
         }
     }
